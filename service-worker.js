@@ -5,3 +5,8 @@ self.addEventListener('fetch', event => {
         new Response(`self.location.origin is ${self.location.origin}`, { headers: { 'Content-Type': 'text/html' } })
     );
 });
+
+self.addEventListener('activate', event => {
+    console.log(event);
+    console.log(self);
+});
