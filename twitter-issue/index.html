@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<head>
+    <script src="some-script.js"></script>
+</head>
+<body>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js');
+
+            navigator.serviceWorker.ready.then(function () {
+                
+            });
+        } else {
+            console.error('This browser does not support service workers.');
+        }
+    </script>
+</body>
+</html>
